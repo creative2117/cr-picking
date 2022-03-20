@@ -14,3 +14,5 @@ dependencies {
 	'qb-skillbar',
 	'progressbar'
 }
+
+lua54 'yes'
