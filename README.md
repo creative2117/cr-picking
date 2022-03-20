@@ -6,6 +6,7 @@ An easy to use picking script that let's you pick any item from where ever you l
 
 - [qb-skillbar](https://github.com/qbcore-framework/qb-skillbar)
 - [progressbar](https://github.com/qbcore-framework/progressbar)
+- [qb-core](https://github.com/qbcore-framework/qb-core)
 
 # Installation
 
