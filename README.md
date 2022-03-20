@@ -6,4 +6,4 @@ dependencies:
 qb-skillbar
 progressbar
 
-drag and drop the cr-picking folder in to your resources and start it by typing ensure cr-picking in server.cfg
+drag and drop the cr-picking folder in to your resources and start it by typing `ensure cr-picking` in server.cfg
