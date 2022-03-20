@@ -12,7 +12,8 @@ shared_script 'config.lua'
 
 dependencies {
 	'qb-skillbar',
-	'progressbar'
+	'progressbar',
+	'qb-core'
 }
 
 lua54 'yes'
