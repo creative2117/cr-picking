@@ -10,4 +10,4 @@ An easy to use picking script that let's you pick any item from where ever you l
 
 # Installation
 
-drag and drop the cr-picking folder in to your resources folder and start it by typing `ensure cr-picking` in server.cfg
+drag and drop the cr-picking folder in to your resources folder and start it by adding `ensure cr-picking` in server.cfg
