@@ -1,6 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
+author 'Creative#6720'
 description 'cr-picking'
 version '1.0.0'
 
