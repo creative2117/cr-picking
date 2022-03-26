@@ -55,9 +55,18 @@ Citizen.CreateThread(function()
     end
 end)
 
+local function loadAnimDict(dict)
+	while(not HasAnimDictLoaded(dict)) do
+		RequestAnimDict(dict)
+		Wait(1)
+	end
+end
+
 function PrepareAnim(k)
     local ped = PlayerPedId()
-    TaskStartScenarioInPlace(ped, config.locations[k].anim, 0, true)
+    loadAnimDict(config.locations[k].animDict)
+
+    TaskPlayAnim(ped, config.locations[k].animDict , config.locations[k].anim, 8.0, 1.0, -1, 1, 0, 0, 0, 0 )
 end
 
 function PickMinigame(k)
