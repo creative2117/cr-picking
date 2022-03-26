@@ -11,3 +11,7 @@ An easy to use picking script that let's you pick any item from where ever you l
 # Installation
 
 drag and drop the cr-picking folder in to your resources folder and start it by adding `ensure cr-picking` in server.cfg
+
+# Support
+
+For support join my [discord](https://discord.gg/zFPCa6DuKp)
