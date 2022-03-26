@@ -14,7 +14,8 @@ config.locations = {
         notifyMinigameSuccess = "You are now starting to pick", -- What to notify when you successfullly made all the skillchecks
         notifyMinigameFail = "You failed the skillchecks, Please try again", -- What to notify when you fail the skillchecks
         notifyProgressbar = "You picked up a phone", -- what to notify when the progressbar is done
-        anim = "WORLD_HUMAN_GARDENER_PLANT", -- what animation to make while picking
+        animDict = "anim@amb@clubhouse@mini@darts@", -- The animation dictionary
+        anim = "enter_throw_a", -- The animation in the animation dictionary
         item = "phone", -- What item to give the player
         amount = 1 -- how many of the item to give the player
     },
@@ -29,7 +30,8 @@ config.locations = {
         notifyMinigameSuccess = "You are now starting to pick", -- What to notify when you successfullly made all the skillchecks
         notifyMinigameFail = "You failed the skillchecks, Please try again", -- What to notify when you fail the skillchecks
         notifyProgressbar = "You picked up a bag of coke", -- what to notify when the progressbar is done
-        anim = "WORLD_HUMAN_GARDENER_PLANT", -- what animation to make while picking
+        animDict = "anim@amb@clubhouse@mini@darts@", -- The animation dictionary
+        anim = "enter_throw_a", -- The animation in the animation dictionary
         item = "cokebaggy", -- What item to give the player
         amount = 1 -- how many of the item to give the player
     },
