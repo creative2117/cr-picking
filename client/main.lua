@@ -60,8 +60,8 @@ else
     for k, _ in pairs(config.locations) do
         for i, _ in pairs(config.locations[k].coords) do
 
-            exports['qb-target']:AddCircleZone('cr-picking' .. k, vector3(config.locations[k].coords[i].x, config.locations[k].coords[i].y, config.locations[k].coords[i].z), 0.5,{
-                name = 'garbagebin', debugPoly = config.debug, useZ=true}, {
+            exports['qb-target']:AddCircleZone('cr-picking_' .. k .. i, vector3(config.locations[k].coords[i].x, config.locations[k].coords[i].y, config.locations[k].coords[i].z), 0.5,{
+                name = 'cr-picking_' .. k .. i, debugPoly = config.debug, useZ=true}, {
                 options = {{label = config.locations[k].text,icon = 'fa-solid fa-hand-rock-o', action = function() PickMinigame(k) end}},
                 distance = 2.0
             })
