@@ -1,6 +1,8 @@
 config = {}
 
+config.debug = false
 config.key = 47 -- G
+config.useTarget = GetConvar('UseTarget', 'false') == 'true'
 
 config.locations = {
     ['1'] = {  -- Just and example, change to whatever you like
@@ -8,7 +10,7 @@ config.locations = {
             ['1'] = vector3(-615.61, 20.3, 41.7),
             ['2'] = vector3(-603.97, 21.39, 42.76)
         },
-        text = "[G] Start picking", -- What 3dtext to display
+        text = "[G] Start picking", -- What 3dtext or target option text to display
         skillBar = "easy", -- How hard the skillchecks should be. "hard", "medium" or "easy"
         progressbar = math.random(10000, 15000), -- How long the progressbar should be
         notifyMinigameSuccess = "You are now starting to pick", -- What to notify when you successfullly made all the skillchecks
@@ -24,7 +26,7 @@ config.locations = {
             ['1'] = vector3(-615.61, 20.3, 41.7),
             ['2'] = vector3(-603.97, 21.39, 42.76)
         },
-        text = "[G] Start picking", -- What 3dtext to display
+        text = "[G] Start picking", -- What 3dtext or target option text to display
         skillBar = "hard", -- How hard the skillchecks should be. "hard", "medium" or "easy"
         progressbar = math.random(10000, 15000), -- How long the progressbar should be
         notifyMinigameSuccess = "You are now starting to pick", -- What to notify when you successfullly made all the skillchecks

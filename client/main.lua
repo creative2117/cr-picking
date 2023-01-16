@@ -22,38 +22,53 @@ local function DrawText3D(x, y, z, text)
     ClearDrawOrigin()
 end
 
-Citizen.CreateThread(function()
-    while true do
-        local inRange = false
 
-        local PlayerPed = PlayerPedId()
-        local PlayerPos = GetEntityCoords(PlayerPed)
-        
-        
-        for k, v in pairs(config.locations) do
-            for _, v in pairs(config.locations[k].coords) do
-                local coords = vector3(config.locations[k].coords[_].x, config.locations[k].coords[_].y, config.locations[k].coords[_].z)
-                local dist = #(PlayerPos - coords)
-                if dist < 15 then
-                    inRange = true
-                    
-                    if dist < 5 then
-                        DrawText3D(coords.x, coords.y, coords.z, config.locations[k].text)
-                        if IsControlJustPressed(0, config.key) then
-                            PickMinigame(k)
+if not config.useTarget then
+    CreateThread(function()
+        while true do
+            local inRange = false
+
+            local PlayerPed = PlayerPedId()
+            local PlayerPos = GetEntityCoords(PlayerPed)
+            
+            
+            for k, v in pairs(config.locations) do
+                for _, v in pairs(config.locations[k].coords) do
+                    local coords = vector3(config.locations[k].coords[_].x, config.locations[k].coords[_].y, config.locations[k].coords[_].z)
+                    local dist = #(PlayerPos - coords)
+                    if dist < 15 then
+                        inRange = true
+                        
+                        if dist < 5 then
+                            DrawText3D(coords.x, coords.y, coords.z, config.locations[k].text)
+                            if IsControlJustPressed(0, config.key) then
+                                PickMinigame(k)
+                            end
                         end
                     end
                 end
-            end
-            
-        end 
+                
+            end 
 
-        if not inRange then
-            Citizen.Wait(2000)
+            if not inRange then
+                Wait(2000)
+            end
+            Wait(3)
         end
-        Citizen.Wait(3)
+    end)
+else
+    for k, _ in pairs(config.locations) do
+        for i, _ in pairs(config.locations[k].coords) do
+
+            exports['qb-target']:AddCircleZone('cr-picking' .. k, vector3(config.locations[k].coords[i].x, config.locations[k].coords[i].y, config.locations[k].coords[i].z), 0.5,{
+                name = 'garbagebin', debugPoly = config.debug, useZ=true}, {
+                options = {{label = config.locations[k].text,icon = 'fa-solid fa-hand-rock-o', action = function() PickMinigame(k) end}},
+                distance = 2.0
+            })
+        end
     end
-end)
+end
+
 
 local function loadAnimDict(dict)
 	while(not HasAnimDictLoaded(dict)) do
