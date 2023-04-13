@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X0KDPJQ)
 # cr-picking
 
 An easy to use picking script that let's you pick any item from where ever you like with an easy to use config.
