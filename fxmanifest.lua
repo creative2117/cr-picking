@@ -3,20 +3,16 @@ game 'gta5'
 
 author 'Creative#6720'
 description 'cr-picking'
-version '1.0.2'
+version '1.0.1'
 
 server_script 'server/main.lua'
 
-client_scripts {
-	'client/main.lua',
-	'@PolyZone/client.lua',
-    '@PolyZone/CircleZone.lua',
-}
+client_script 'client/main.lua'
 
 shared_script 'config.lua'
 
 dependencies {
-	'qb-minigames',
+	'qb-skillbar',
 	'progressbar',
 	'qb-core'
 }
