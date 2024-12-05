@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Creative#6720'
 description 'cr-picking'
-version '1.0.2'
+version '1.1.0'
 
 server_script 'server/main.lua'
 
